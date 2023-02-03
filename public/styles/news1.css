@@ -1,0 +1,28 @@
+.news_post_date_container
+{
+	width: 200px;
+	height: 113px;
+	border-radius: 39px;
+	background: linear-gradient(to right, #487fee, #32fa95);
+}
+.property_icon
+{
+	display: inline-block;
+	width: 30px;
+	height: 15px;
+	margin-right: 8px;
+}
+
+.phone_num_inner img
+{
+	width: 30px;
+	height: 20px;
+	
+	background: #3f6fce;
+
+}
+.fa-graduation-cap
+{
+	color: #fff;
+}
+
