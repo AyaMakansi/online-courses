@@ -25,4 +25,13 @@
 {
 	color: #fff;
 }
-
+.dropdown-menu .dropdown-item{
+	color: #3f6fce;
+	display: block;
+    
+    transition: all .15s linear;
+    white-space: nowrap;
+}
+.main_nav .nav-item{
+padding-left: 100px;
+}

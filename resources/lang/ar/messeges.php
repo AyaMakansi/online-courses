@@ -171,5 +171,5 @@ return [
 'lesson video'=>'فيديو الدرس',
 'update lesson'=>'تعديل الدرس',
 'search failed please try again'=>'فشل البحث يرجى المحاولة مرة أخرى',
-
+'profile'=>'الملف الشخصي',
 ];

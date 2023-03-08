@@ -7,7 +7,9 @@ use App\Http\Requests\VideosRequest;
 use Illuminate\Http\Request;
 use App\Models\Videos;
 use App\Models\ItemCourses;
+use App\Models\Lesson;
 use App\Traits\CategoryTrait;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Auth;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
@@ -74,17 +76,16 @@ class VideosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+   
     public function show($id)
     { $user=Auth::user();
-        $videos =Videos::where('course_id' , $id)->get();
-        foreach($videos as $video) {
-            $video =Videos::find($video->id);
-        event(new VideoViewer($video));}
-       
-        
-        return view('pages.videos' , ['allvideos' => $videos],['user'=>$user]);
+        $allvideos = Videos::where('course_id' , $id)->get();
+       foreach($allvideos as $video){
+        $alllesson=Lesson::firstWhere('video_id',$video->id);
+        event(new VideoViewer($alllesson));
+    } 
+       return view('pages.videos', ['videos' => $allvideos,'lesson'=>$alllesson,'course_id'=>$id],['user'=>$user]);
     }
-
     public function getvideos($course_id){
         $course= ItemCourses::find($course_id);
         $videos=Videos::where('course_id',$course_id)->get();

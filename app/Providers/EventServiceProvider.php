@@ -32,6 +32,8 @@ class EventServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Event::listen('event.*', function ($eventName, array $data) {
+            //
+        });
     }
 }

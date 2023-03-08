@@ -78,7 +78,7 @@
 					<ul class="nav nav-pills secondary">
 						<li class="nav-item user-avatar-wrapper hidden-sm-down">
 							<a href="#" class="nav-link circle user-avatar-image">
-							<img src="{{asset('images/users/'.$user->image)}}"></a>
+							<img src="{{asset('images/users/'.$user->image)}}" width="45" height="45"></a>
 							<span class="user-avatar-status"></span>
 
 							<ul class="header-more-menu">

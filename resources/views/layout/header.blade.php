@@ -23,39 +23,33 @@
 								<li class="nav-link {{ request()->routeIs('allcourses') ? 'active' : '' }}"><a href="{{route('allcourses')}}" >{{__('messeges.the courses')}}</a></li>
                                <li class="nav-link {{ request()->routeIs('Quizes') ? 'active' : '' }}"><a href="{{route('Quizes')}}">{{__('messeges.quizes')}}</a></li>
 								<li class="nav-link {{ request()->routeIs('Contact') ? 'active' : '' }}"><a href="{{route('Contact')}}">{{__('messeges.contact us')}}</a></li>
-                                <li class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}"><a href="{{route('dashboard',$user->id)}}">user</a></li>
-							
-                            </ul>
-						</nav>
-						
-                    <div class="phone_num">
-							<div class="phone_num_inner">
-                        <!-- Authentication Links -->
-                        @guest
-                        
-                            @if (Route::has('login'))
-                               <!-- <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>-->
-                                
-                               <a href="{{ route('login') }}"><i class="fa fa-sign-in"></i> {{ __('messeges.login') }}</a>
-                                @endif
-                       
-                        @else
-        
-                                <a  href="{{ route('logout') }}" 
-                                onclick="event.preventDefault();
+             
+                 <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img src="{{asset('images/users/'.$user->image)}}" width="40" height="40" class="rounded-circle">
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+        		
+          <a class="dropdown-item"  href="{{route('dashboard',$user->id)}}">{{__('messeges.dashboard')}}</a>
+          @guest
+           @if (Route::has('login'))
+         <a href="{{ route('login') }}"><i class="fa fa-sign-in"></i> {{ __('messeges.login') }}</a>
+			     @endif
+            @else
+            <a class="dropdown-item" href="{{ route('logout') }}"onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                       {{__('messeges.logout')}}
-                                </a>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                      {{__('messeges.logout')}}</a>
+								<form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                         @csrf
                                     </form>
-                                </div>
-                         
-                        @endguest
-                    </div>
-                    		
+                                    @endguest
+         </div>
+      </li>
+      
+                            </ul>
+                            
+						</nav>
+													
 </div>
 </div>
 </div>

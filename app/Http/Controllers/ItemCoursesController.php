@@ -9,6 +9,7 @@ use App\Models\CatItems;
 use App\Models\Professor;
 use App\Models\Videos;
 use App\Traits\CategoryTrait;
+use Illuminate\Contracts\Session\Session;
 use Illuminate\Support\Facades\Auth;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
@@ -23,7 +24,9 @@ class ItemCoursesController extends Controller
     public function index()
     {   $user=Auth::user();
         $courses= ItemCourses::paginate(3);
+        
         return view('pages.courses1',['allitemcourses'=>$courses],['user'=>$user]);
+        
     }
     public function search(Request $request)
     {
@@ -105,7 +108,7 @@ class ItemCoursesController extends Controller
     {
         $user=Auth::user();
         $courses = ItemCourses::with('item')->where('item_id' , $id)->get();
-        
+         
         return view('pages.courses' , ['allcourses' => $courses],['user'=>$user]);
     }
     public function getallcourses()

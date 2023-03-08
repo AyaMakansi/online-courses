@@ -2,6 +2,7 @@
 
 namespace App\Events;
 
+use App\Models\Lesson;
 use App\Models\Videos;
 use Illuminate\Broadcasting\Channel;
 use Illuminate\Broadcasting\InteractsWithSockets;
@@ -20,10 +21,10 @@ class VideoViewer
      *
      * @return void
      */
-    public $video;
-    public function __construct(Videos $video)
+    public $lesson;
+    public function __construct(Lesson $lesson)
     {  
-        $this->video = $video;
+        $this->lesson = $lesson;
     }
 
     /**
@@ -35,4 +36,5 @@ class VideoViewer
     {
         return new PrivateChannel('channel-name');
     }
+    
 }

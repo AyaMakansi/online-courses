@@ -177,4 +177,5 @@ return [
 'lesson video'=>'Lesson Video',
 'update lesson'=>'Update Lesson',
 'search failed please try again'=>'search failed please try again',
+'profile'=>'profile',
 ];

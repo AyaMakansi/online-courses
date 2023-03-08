@@ -4,6 +4,7 @@
 <link rel="stylesheet" type="text/css" href="{{asset('styles/about_responsive.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('styles/properties.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('styles/properties_responsive.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('styles/properties1.css')}}">
 @endsection
 @section('content')
 

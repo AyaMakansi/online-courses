@@ -3,8 +3,10 @@
 namespace App\Listeners;
 
 use App\Events\VideoViewer;
+use App\Models\Lesson;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
+use Illuminate\Support\Facades\Auth;
 
 class IncreaseCounter
 {
@@ -24,15 +26,17 @@ class IncreaseCounter
      * @param  object  $event
      * @return void
      */
+    
     public function handle(VideoViewer $event)
-    {  if(!session()->has('videoinvisited'))
-        {$this->updateViewer($event->video);}
+    { 
+         if(!session()->has('videoinvisited'))
+       $this->updateViewer($event->lesson);
         else{return false;}
     }
-    function updateViewer($video)
-    {
-      $video->viewer=$video->viewer + 1;
-       $video->save();
-      session()->put('videoinvisited',$video->id);
+    function updateViewer($lesson)
+    { $user=Auth::user();
+      $lesson->viewer=$lesson->viewer + 1;
+       $lesson->save();
+       session()->put('videoinvisited',$lesson->id);
     }
 }

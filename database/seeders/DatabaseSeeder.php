@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
             seedVideos::class,
            // seedUser::class,
             seedQuiz::class,
-          
+            seedLesson::class,
         ]);
     }
 }

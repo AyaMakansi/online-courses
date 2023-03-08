@@ -10,11 +10,13 @@ use App\Http\Controllers\ItemCoursesController;
 use App\Http\Controllers\VideosController;
 use App\Http\Controllers\ProfessorController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LessonController;
 use App\Http\Controllers\QuizController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\OptionController;
 use App\Models\CatItems;
 use App\Models\ItemCourses;
+use App\Models\Lesson;
 use Illuminate\Support\Facades\Auth;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
@@ -69,6 +71,8 @@ Route::group(['middleware'=>['auth:sanctum'],],function(){
     Route::get('/allcourses', [ItemCoursesController::class, 'index'])->name('allcourses');
     
     Route::get('/Lessons/{id}', [VideosController::class, 'show'])->name('getlessons');
+    Route::get('/videos/{id}', [LessonController::class, 'show'])->name('getvideos');
+   
     Route::group(['prefix'=>'admin/categories'],function(){
         Route::post('add', [CategoryController::class, 'add'])->name('categories.add');
         Route::get('edit/{category_id}',[CategoryController::class,'edit'])->name('categories.edit');
@@ -164,6 +168,7 @@ Route::get('/coursesforprofessor/{id}', [ItemCoursesController::class, 'getcours
 
 //Route::any('submitans','QuestionController@submitans');
 Route::any('submitans/{id}',[QuestionController::class,'submitans'])->name('submitans');
+
 Route::any('/startquiz/{id}', [QuestionController::class, 'startquiz'])->name('getquestions');
 
 

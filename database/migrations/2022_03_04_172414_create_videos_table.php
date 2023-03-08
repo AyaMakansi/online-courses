@@ -18,8 +18,6 @@ class CreateVideosTable extends Migration
             $table->string('name_en');
             $table->string('name_ar');
             $table->foreignId('course_id')->references('id')->on('itemcourses')->onDelete('cascade');
-            $table->string('video');
-            $table->integer('viewer')->default(0);
             $table->string('description_en');
             $table->string('description_ar');
             $table->timestamps();

@@ -7,6 +7,7 @@
 <link rel="stylesheet" type="text/css" href="{{asset('styles/news_responsive.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('styles/properties_style.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('styles/news1.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('styles/properties1.css')}}">
 @endsection
 @section('content')
 <div class="home">
@@ -31,6 +32,7 @@
 	</div>
 <div class="properties">
 		<div class="container">
+		
 			<div class="row">
 				<div class="col">
 					<div class="section_title">Lessons</div>
@@ -38,18 +40,18 @@
 				</div>
 			</div>
 			<div class="row properties_row">
-			@foreach($allvideos as $videos)
+			
 				<!-- Property -->
-				
+				@foreach($videos as $videos)
 				<div class="news_post">
 							<div class="news_post_title_container d-flex flex-row align-items-center justify-content-start">
 								<div><div class="news_post_date_container d-flex flex-column align-items-center justify-content-center">
 									
 								@if(app()->getLocale() == 'en')
 								<div class="news_post_day">{{$videos->name_en}}</div>
-                            @else
-					        <div class="news_post_day">{{$videos->name_ar}}</div>
-                            @endif
+                                @else
+					            <div class="news_post_day">{{$videos->name_ar}}</div>
+                                  @endif
 									<!--<div class="news_post_month">Apr '18</div>-->
 								</div></div>
 								<div class="news_post_title_content">
@@ -64,14 +66,13 @@
 											<li><div class="property_icon"><img src="{{asset('images/categories'.$videos->course->item->category->icon)}}" ></div> <a href="#">{{$videos->course->item->category->name_ar}}</a></li>
 											
                                         @endif 
-										<li> <a href="#">{{$videos->viewer}}</a></li>
-										 
+										<li> <a href="#">{{$lesson->viewer}}</a></li>
 										</ul>
 									</div>
 								</div>
 							</div>
 							<div class="news_post_video"><video width="620" height="380" controls>
-                             <source src="{{asset('videos/'.$videos->video)}}" type="video/mp4">
+                             <source src="{{asset('videos/'.$lesson->video)}}" type="video/mp4">
                             </video></div>
 							<div class="news_post_text">
 							@if(app()->getLocale() == 'en')	
@@ -80,8 +81,11 @@
 								<p>{{$videos->description_ar}}</p>
 								@endif
 							</div>
+							
+					
 						</div>
-            @endforeach
+						
+						@endforeach
 			
 		</div>
 	</div>
