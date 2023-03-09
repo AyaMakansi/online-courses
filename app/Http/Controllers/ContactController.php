@@ -19,6 +19,11 @@ class ContactController extends Controller
     {   $user=Auth::user();
         return view('pages.Contact',['user'=>$user]);
     }
+    public function getabout()
+    {   $user=Auth::user();
+        return view('pages.About',['user'=>$user]);
+    }
+
 
     /**
      * Show the form for creating a new resource.

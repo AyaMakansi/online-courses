@@ -162,7 +162,7 @@ Route::group(['middleware'=>['auth:sanctum'],],function(){
     Route::delete('/removeCategory/{id}', [CategoryController::class, 'destroy'])->name('RemoveCategory');
     Route::delete('/removeProfessor/{id}', [ProfessorController::class, 'destroy'])->name('RemoveProfessor');
 */
-Route::get('/about', [ProfessorController::class, 'getallprofessor'])->name('About');
+Route::get('/about',[ContactController::class,'getabout'])->name('About');
 Route::get('/coursesforprofessor/{id}', [ItemCoursesController::class, 'getcoursesforprofessor'])->name('getcoursesforprofessor');
 
 

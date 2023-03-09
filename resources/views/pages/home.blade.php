@@ -344,7 +344,7 @@ Cities -->
             <div class="testimonial">
                 <div class="testimonial_title">Amazing course for me</div>
                 <div class="testimonial_text">Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul.</div>
-                <div class="testimonial_author_image"><img src="images/testimonial_1.jpg" alt=""></div>
+                <div class="testimonial_author_image"><img src="{{asset('images/testimonial_1.jpg')}}" alt=""></div>
                 <div class="testimonial_author"><a href="#">Diane Smith</a><span>, {{__('messeges.student')}}</span></div>
                 <div class="rating_r rating_r_5 testimonial_rating"><i></i><i></i><i></i><i></i><i></i></div>
             </div>
@@ -355,7 +355,7 @@ Cities -->
             <div class="testimonial">
                 <div class="testimonial_title">Very good professors</div>
                 <div class="testimonial_text">Nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul. Etiam nec odio vestibulum est mat tis effic iturut magna. Pellentesque sit amet tellus blandit.</div>
-                <div class="testimonial_author_image"><img src="images/testimonial_2.jpg" alt=""></div>
+                <div class="testimonial_author_image"><img src="{{asset('images/testimonial_2.jpg')}}" alt=""></div>
                 <div class="testimonial_author"><a href="#">Michael Duncan</a><span>, {{__('messeges.student')}}</span></div>
                 <div class="rating_r rating_r_5 testimonial_rating"><i></i><i></i><i></i><i></i><i></i></div>
             </div>
@@ -366,7 +366,7 @@ Cities -->
             <div class="testimonial">
                 <div class="testimonial_title">Very good communication</div>
                 <div class="testimonial_text">Retiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit amet tellus blandit. Etiam nec odio vestibulum est mattis effic iturut magna. Pellentesque sit am et tellus blandit. Etiam nec odio vestibul.</div>
-                <div class="testimonial_author_image"><img src="images/testimonial_3.jpg" alt=""></div>
+                <div class="testimonial_author_image"><img src="{{asset('images/testimonial_3.jpg')}}" alt=""></div>
                 <div class="testimonial_author"><a href="#">Shawn Gaines</a><span>, {{__('messeges.student')}}</span></div>
                 <div class="rating_r rating_r_5 testimonial_rating"><i></i><i></i><i></i><i></i><i></i></div>
             </div>

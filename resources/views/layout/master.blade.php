@@ -19,7 +19,7 @@
 <link rel="stylesheet" type="text/css" href="{{asset('styles/property_responsive.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('styles/news1.css')}}">
 
-<link rel="stylesheet" type="text/css" href="{{asset('styles/style.css')}}">
+
 
 
 @yield('css')
@@ -35,6 +35,7 @@
 @include('layout.footer')
 
     <script src="{{asset('js/jquery-3.2.1.min.js')}}"></script>
+    <script src="{{asset('js/jquery.js')}}"></script>
 <script src="{{asset('styles/bootstrap4/popper.js')}}"></script>
 <script src="{{asset('styles/bootstrap4/bootstrap.min.js')}}"></script>
 <script src="{{asset('plugins/OwlCarousel2-2.2.1/owl.carousel.js')}}"></script>
@@ -46,7 +47,7 @@
 <script src="{{asset('plugins/scrollmagic/ScrollMagic.min.js')}}"></script>
 <script src="{{asset('plugins/greensock/animation.gsap.min.js')}}"></script>
 <script src="{{asset('plugins/greensock/ScrollToPlugin.min.js')}}"></script>
-<script src="{{asset('js/property.js')}}"></script>
+
 <script src="{{asset('plugins/jquery-circle-progress-1.2.2/circle-progress.js')}}"></script>
 
 

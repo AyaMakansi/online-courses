@@ -2,10 +2,11 @@
 @section('css')
 <link rel="stylesheet" type="text/css" href="{{asset('styles/about.css')}}">
 <link rel="stylesheet" type="text/css" href="{{asset('styles/about_responsive.css')}}">
+<link rel="stylesheet" type="text/css" href="{{asset('styles/properties1.css')}}">
 @endsection
 @section('content')
 <div class="home">
-		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="images/about1.jpg" data-speed="0.8"></div>
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{{asset('images/online-course.jpg')}}" data-speed="0.8"></div>
 		<div class="home_container">
 			<div class="container">
 				<div class="row">
@@ -104,7 +105,7 @@
 
 				<!-- About Image -->
 				<div class="col-lg-6">
-					<div class="about_image"><img src="images/about2.jpg" alt=""></div>
+					<div class="about_image"><img src="{{asset('images/about2.jpg')}}" alt=""></div>
 				</div>
 			</div>
 			<div class="row milestones_row">

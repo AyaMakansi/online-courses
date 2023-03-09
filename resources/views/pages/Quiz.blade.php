@@ -7,6 +7,27 @@
 
 @endsection
 @section('content')
+<div class="home">
+		<div class="parallax_background parallax-window" data-parallax="scroll" data-image-src="{{asset('images/course.jpg')}}" data-speed="0.8"></div>
+		<div class="home_container">
+			<div class="container">
+				<div class="row">
+					<div class="col">
+						<div class="home_content d-flex flex-row align-items-end justify-content-start">
+							<div class="home_title">{{__('messeges.quizzes')}}</div>
+							<div class="breadcrumbs ml-auto">
+								<ul>
+									<li><a href="index.htmo">{{__('messeges.home')}}</a></li>
+									<li>{{__('messeges.quizzes')}}</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
 <div class="elements">
 		<div class="container">
 			<div class="row">
