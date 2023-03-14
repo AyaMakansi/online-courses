@@ -6,42 +6,31 @@
 					</h2></span>
 		
 
-					<a href="{{route('course.create')}}" class="btn btn-primary btn-block hidden-md-down"><i class="md-icon">add</i>{{__('messeges.add course')}}</a>
-
+					
 		<div class="dashboard-nav-primary collapse navbar-toggleable-md">
 			<ul class="nav nav-pills nav-stacked">
 				<li class="nav-item">
 					<a href="{{route('dashboard',$user->id)}}" class="nav-link {{ request()->routeIs('dashboard') ? 'active' : '' }}"><i class="md-icon">dashboard</i> {{__('messeges.dashboard')}}</a>
-				</li> 
-
-				<li class="nav-item">
-					<a href="{{route('professor.allcourses')}}" class="nav-link {{ request()->routeIs('professor.allcourses') ? 'active' : '' }}"><i class="md-icon">view_list</i> {{__('messeges.the courses')}}</a>
 				</li>
-
-				<li class="nav-item">
-					<a href="{{route('professor.allquizzes')}}" class="nav-link {{ request()->routeIs('professor.allquizzes') ? 'active' : '' }}"><i class="md-icon">quiz</i> {{__('messeges.quizzes')}}</a>
-				</li>
-
-				
+				 
 
 				<li class="nav-item">
 					<a href="{{route('setting')}}" class="nav-link {{ request()->routeIs('setting') ? 'active' : '' }}"><i class="md-icon">settings</i> {{__('messeges.settings')}}</a>
 				</li>
-
 				<li class="nav-item">
 				
 				@guest
 				@if (Route::has('login'))
 						   
-						   <a href="{{ route('login') }}"><i class="fa fa-sign-in"></i> {{ __('messeges.login') }}</a>
-							@endif
+				<a href="{{ route('login') }}"><i class="fa fa-sign-in"></i> {{ __('messeges.login') }}</a>
+				@endif
 				   
 					@else
 					<a href="{{ route('logout') }}" class="nav-link" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                       <i class="md-icon">power_settings_new</i>{{__('messeges.logout')}}</a>
-									   @endguest
-									 				</li>
+                 <i class="md-icon">power_settings_new</i>{{__('messeges.logout')}}</a>
+				@endguest
+				</li>
 								
 			</ul>
 		</div>

@@ -22,7 +22,7 @@ class DatabaseSeeder extends Seeder
             seedItemCourses::class,
             seedVideos::class,
            // seedUser::class,
-            seedQuiz::class,
+            
             seedLesson::class,
         ]);
     }

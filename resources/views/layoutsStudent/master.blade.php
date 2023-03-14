@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css"> 
-    <link href="{{asset('styles/owl.carousel.css')}}" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+    
+     <link href="{{asset('styles/owl.carousel.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('styles/leaflet.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('styles/leaflet.markercluster.css')}}" rel="stylesheet" type="text/css">
     <link href="{{asset('styles/leaflet.markercluster.default.css')}}" rel="stylesheet" type="text/css">        
@@ -19,11 +20,10 @@
 </head>
 <body>
 
-@include('layoutsProfessor.header')
+@include('layoutsStudent.header')
 
 
 @yield('content')
-
 
 
 

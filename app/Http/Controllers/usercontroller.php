@@ -49,7 +49,7 @@ class usercontroller extends Controller
         }
         else if($user->type == 'Professor')
         {return view('pages.professor.dashboard',compact('user'));}
-        else{return view('errors.404');}
+        else{return view('pages.student.dashboard',compact('user'));}
     }
     /*public function getsetting()
     {  $user=Auth::user();
@@ -146,7 +146,7 @@ class usercontroller extends Controller
          else if($user->type == 'Professor'){
             return view('pages.professor.setting',compact('user'));
          }
-         else{return view('errors.404');}
+         else{return view('pages.student.setting',compact('user'));}
     }
     public function settingupdate(Request $request, $user_id)
     {
@@ -218,7 +218,7 @@ class usercontroller extends Controller
         else if ($user->type == 'Professor'){
             return view('pages.professor.setting');
         }
-        else{return view('errors.404');}
+        else{return view('pages.student.setting');}
         
     }
     public function changePasswordSave(Request $request)
